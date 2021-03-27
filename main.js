@@ -1,7 +1,10 @@
 //leer nuemro ingresado
-var getnumber = () => {
-var numero = document.getElementById("numero").nodeValue;
-}
+var button = document.getElementById("button")
+button = addEventListener("click", function(e){
+    e.preventDefault
+    var num = document.getElementById("numero").value
+})
+
 //  desplegar la tabla de multiplicar 
 function genera_tabla() 
 {
@@ -13,11 +16,11 @@ function genera_tabla()
     var tblBody = document.createElement("tbody");
   
     // Crea las celdas
-    for (var i = 0; i <= 10; i++) {
+    for (var i = 1; i <= 10; i++) {
       // Crea las hileras de la tabla
       var hilera = document.createElement("tr");
         var celda = document.createElement("td");
-        var textoCelda = document.createTextNode(i+"x"+"="+i*numero);
+        var textoCelda = document.createTextNode(i+"x"+"="+i*num);
         celda.appendChild(textoCelda);
         hilera.appendChild(celda);
       
